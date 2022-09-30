@@ -3,4 +3,16 @@ project(LTKJ)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(LTKJ main.cpp)
+
+file(GLOB_RECURSE LTKJ_SRC
+        src/Flow.cpp
+        )
+
+file(GLOB_RECURSE LTKJ_INC
+        src/Flow.h
+        src/unitls.h
+        )
+
+
+
+add_executable(LTKJ main.cpp ${LTKJ_SRC}  ${LTKJ_INC})
